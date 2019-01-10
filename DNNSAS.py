@@ -52,7 +52,7 @@ for ind, path in tqdm(enumerate(dir_titles), total=len(dir_titles)):
 			X_train[ind][i] = imResize
 			i += 1
 
-		#if picture.startswith("final_"+cur_trgt):
+		if picture.startswith("final_"+cur_trgt):
 			im = Image.open(dat_set+"/"+path+"/"+picture)
 			imResize = im.resize((512,512))
 			Y_train[ind] = imResize
